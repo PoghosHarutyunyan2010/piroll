@@ -1,3 +1,30 @@
+:root {
+  /* Colors */
+  --color-theme: #10c9c3;
+  --color-dark: #000;
+  --color-grey-2: #222;
+  --color-grey-7: #777;
+  --color-grey-c: #ccc;
+  --color-grey-d: #ddd;
+  --color-grey-e: #eee;
+  --color-light: #fff;
+
+  /* Font Families */
+
+  --font-main: "Montserrat", sans-serif;
+  --font-sec: "Nunito", sans-serif;
+
+  /* Font Sizes */
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 36px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,8 +32,103 @@
 }
 body {
   min-height: 100vh;
+  font-family: var(--font-main);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: inherit;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.container {
-    
+.common_heading {
+  color: var(--color-grey-2);
+  font-weight: 500;
+  font-family: var(--font-main);
+  line-height: 1.5;
+  font-size: var(--font-size-xl);
+}
+.common_text {
+  color: var(--color-grey-2);
+  font-weight: 400;
+  font-family: var(--font-sec);
+  line-height: 1.5;
+  font-size: var(--font-size-s);
+}
+
+.common_button {
+  font-family: var(--font-main);
+  font-weight: 400;
+  color: var(--color-light);
+  padding: 1em 3em;
+  background: var(--color-theme);
+  border-radius: 4px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.hero {
+  background: url("img/main.jpg") no-repeat center center / cover;
+  height: 100vh;
+}
+.hero_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+.hero_block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+  width: 80%;
+  max-width: 600px;
+}
+.hero_heading {
+  font-size: var(--font-size-xxl);
+}
+
+.hero_text {
+  width: 90%;
+}
+
+.about_wrap{
+text-align: center;
+max-width: 600px;
+margin: 0 auto;
+padding: 80px 0;
+display: flex;
+flex-direction: column;
+gap: 2em;
+align-items: center;
+}
+
+.about_img{
+  width: 200px;
+}
+.about_img > img {
+  width: 100%;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .hero_wrap {
+    justify-content: center;
+  }
+  .hero_block {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 568px) and (max-width: 768px) {
+
 }
